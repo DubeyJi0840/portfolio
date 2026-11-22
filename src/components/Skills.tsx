@@ -24,7 +24,7 @@ export const Skills: React.FC = () => {
           {skillCategories.map((cat, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-xl bg-[#111216] border border-[#20222a] hover:border-[#ff5500]/40 transition-all flex flex-col justify-between space-y-4"
+              className="min-w-0 p-5 sm:p-6 rounded-xl bg-[#111216] border border-[#20222a] hover:border-[#ff5500]/40 transition-all flex flex-col justify-between space-y-4"
             >
               <div className="space-y-3">
                 <div className="flex items-center justify-between pb-2 border-b border-[#1b1c22]">

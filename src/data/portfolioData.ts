@@ -15,6 +15,7 @@ export const personalInfo = {
   phone: '+91 9135737500',
   github: 'https://github.com/DubeyJi0840',
   linkedin: 'https://www.linkedin.com/in/aditya-narayan-84634525b/',
+  portfolioUrl: 'https://dubeyji0840.github.io/portfolio/',
   availableForHire: true,
   statusText: 'Available for full-time roles & high-impact contracts',
   resumeUrl: './assets/aditya-narayan-resume.pdf',

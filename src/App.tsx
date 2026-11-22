@@ -13,14 +13,14 @@ export function App() {
   const [isResumeOpen, setIsResumeOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-[#09090b] text-[#f4f4f5] font-sans selection:bg-[#ff5500]/30 selection:text-white">
+    <div className="min-h-screen w-full max-w-full overflow-x-hidden bg-[#09090b] text-[#f4f4f5] font-sans selection:bg-[#ff5500]/30 selection:text-white">
       {/* Sticky Navigation */}
       <div className="no-print">
         <Navbar onOpenResume={() => setIsResumeOpen(true)} />
       </div>
 
       {/* Main Content Sections */}
-      <main>
+      <main className="w-full max-w-full overflow-x-hidden">
         <div className="no-print">
           <Hero onOpenResume={() => setIsResumeOpen(true)} />
         </div>

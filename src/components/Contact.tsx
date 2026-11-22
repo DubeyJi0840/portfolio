@@ -116,7 +116,7 @@ export const Contact: React.FC = () => {
               <div className="flex items-baseline justify-between">
                 <a
                   href={`mailto:${personalInfo.email}`}
-                  className="text-sm sm:text-base font-mono font-medium text-white hover:text-[#ff5500] transition-colors truncate max-w-[240px]"
+                  className="text-sm sm:text-base font-mono font-medium text-white hover:text-[#ff5500] transition-colors truncate max-w-[170px] xs:max-w-[240px]"
                 >
                   {personalInfo.email}
                 </a>

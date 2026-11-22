@@ -182,9 +182,17 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                   </a>
                 </div>
                 <div style={{ fontSize: '9.2px', color: '#333333', fontWeight: '500' }}>
-                  <span>github.com/DubeyJi0840</span>
+                  <a href="https://dubeyji0840.github.io/portfolio/" target="_blank" rel="noopener noreferrer" style={{ color: '#000000', textDecoration: 'none', fontWeight: '700' }}>
+                    Portfolio
+                  </a>
                   <span style={{ margin: '0 8px', color: '#888888' }}>|</span>
-                  <span>linkedin.com/in/aditya-narayan-84634525b</span>
+                  <a href="https://github.com/DubeyJi0840" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'none' }}>
+                    github.com/DubeyJi0840
+                  </a>
+                  <span style={{ margin: '0 8px', color: '#888888' }}>|</span>
+                  <a href="https://linkedin.com/in/aditya-narayan-84634525b" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'none' }}>
+                    linkedin.com/in/aditya-narayan-84634525b
+                  </a>
                 </div>
               </div>
 
@@ -364,9 +372,16 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
                     <span>📍 Noida, India</span>
                   </div>
 
-                  <div style={{ fontSize: '8.8px', color: '#64748b', display: 'flex', gap: '14px', marginTop: '4px' }}>
-                    <span>github.com/DubeyJi0840</span>
-                    <span>linkedin.com/in/aditya-narayan-84634525b</span>
+                  <div style={{ fontSize: '8.8px', color: '#64748b', display: 'flex', gap: '14px', marginTop: '4px', flexWrap: 'wrap' }}>
+                    <a href="https://dubeyji0840.github.io/portfolio/" target="_blank" rel="noopener noreferrer" style={{ color: '#6b21a8', textDecoration: 'none', fontWeight: '700' }}>
+                      Portfolio
+                    </a>
+                    <a href="https://github.com/DubeyJi0840" target="_blank" rel="noopener noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>
+                      github.com/DubeyJi0840
+                    </a>
+                    <a href="https://linkedin.com/in/aditya-narayan-84634525b" target="_blank" rel="noopener noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>
+                      linkedin.com/in/aditya-narayan-84634525b
+                    </a>
                   </div>
                 </div>
 

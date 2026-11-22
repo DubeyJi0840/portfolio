@@ -7,7 +7,7 @@ export const ResumeSection: React.FC = () => {
 
   const atsPdfUrl = './assets/aditya-narayan-ats-resume.pdf';
   const premiumPdfUrl = './assets/aditya-narayan-premium-resume.pdf';
-  
+
   const currentPdfUrl = resumeFormat === 'ats' ? atsPdfUrl : premiumPdfUrl;
   const currentDownloadName = resumeFormat === 'ats' ? 'Aditya_Narayan_ATS_Resume.pdf' : 'Aditya_Narayan_Premium_Resume.pdf';
 
@@ -40,7 +40,7 @@ export const ResumeSection: React.FC = () => {
   return (
     <section id="resume" className="py-20 border-b border-[#1c1d22] bg-[#08080a] relative">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
-        
+
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
           <div className="max-w-2xl space-y-2">
@@ -94,17 +94,16 @@ export const ResumeSection: React.FC = () => {
 
         {/* Outer Frame: Desk Container with Subtle Border and Zero Dark Overlay */}
         <div className="w-full rounded-2xl bg-[#111217] border border-[#22242e] p-3 sm:p-6 md:p-8 shadow-2xl overflow-x-auto">
-          
+
           {/* Format Selector Bar */}
           <div className="no-print mb-6 pb-4 border-b border-[#1c1d24] flex flex-wrap items-center justify-between gap-3">
             <div className="flex items-center gap-1.5 p-1 rounded-xl bg-[#090a0d] border border-[#1e2029]">
               <button
                 onClick={() => setResumeFormat('ats')}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-all ${
-                  resumeFormat === 'ats'
-                    ? 'bg-[#ff5500] text-white font-semibold shadow-sm'
-                    : 'text-[#a1a1aa] hover:text-white'
-                }`}
+                className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-all ${resumeFormat === 'ats'
+                  ? 'bg-[#ff5500] text-white font-semibold shadow-sm'
+                  : 'text-[#a1a1aa] hover:text-white'
+                  }`}
               >
                 <FileText className="w-3.5 h-3.5" />
                 <span>Official ATS Resume</span>
@@ -112,11 +111,10 @@ export const ResumeSection: React.FC = () => {
 
               <button
                 onClick={() => setResumeFormat('premium')}
-                className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-all ${
-                  resumeFormat === 'premium'
-                    ? 'bg-[#7c3aed] text-white font-semibold shadow-sm'
-                    : 'text-[#a1a1aa] hover:text-white'
-                }`}
+                className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-medium transition-all ${resumeFormat === 'premium'
+                  ? 'bg-[#7c3aed] text-white font-semibold shadow-sm'
+                  : 'text-[#a1a1aa] hover:text-white'
+                  }`}
               >
                 <Sparkles className="w-3.5 h-3.5 text-purple-300" />
                 <span>Premium Resume</span>
@@ -160,9 +158,17 @@ export const ResumeSection: React.FC = () => {
                   </a>
                 </div>
                 <div style={{ fontSize: '9.4px', color: '#333333', fontWeight: '500' }}>
-                  <span>github.com/DubeyJi0840</span>
+                  <a href="https://dubeyji0840.github.io/portfolio/" target="_blank" rel="noopener noreferrer" style={{ color: '#000000', textDecoration: 'none', fontWeight: '700' }}>
+                    Portfolio
+                  </a>
                   <span style={{ margin: '0 8px', color: '#888888' }}>|</span>
-                  <span>linkedin.com/in/aditya-narayan-84634525b</span>
+                  <a href="https://github.com/DubeyJi0840" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'none' }}>
+                    github.com/DubeyJi0840
+                  </a>
+                  <span style={{ margin: '0 8px', color: '#888888' }}>|</span>
+                  <a href="https://linkedin.com/in/aditya-narayan-84634525b" target="_blank" rel="noopener noreferrer" style={{ color: '#333333', textDecoration: 'none' }}>
+                    linkedin.com/in/aditya-narayan-84634525b
+                  </a>
                 </div>
               </div>
 
@@ -330,7 +336,7 @@ export const ResumeSection: React.FC = () => {
                   <h1 style={{ fontSize: '26px', fontWeight: '900', color: '#0f172a', margin: '0 0 3px 0', letterSpacing: '-0.4px', lineHeight: '1.1' }}>
                     ADITYA NARAYAN
                   </h1>
-                  
+
                   {/* Status Banner */}
                   <div style={{ display: 'inline-block', color: '#6b21a8', fontSize: '9.6px', fontWeight: '700', marginBottom: '6px' }}>
                     Software Developer &bull; Full-Stack & Flutter Specialist
@@ -342,9 +348,16 @@ export const ResumeSection: React.FC = () => {
                     <span>📍 Noida, India</span>
                   </div>
 
-                  <div style={{ fontSize: '8.8px', color: '#64748b', display: 'flex', gap: '14px', marginTop: '4px' }}>
-                    <span>github.com/DubeyJi0840</span>
-                    <span>linkedin.com/in/aditya-narayan-84634525b</span>
+                  <div style={{ fontSize: '8.8px', color: '#64748b', display: 'flex', gap: '14px', marginTop: '4px', flexWrap: 'wrap' }}>
+                    <a href="https://dubeyji0840.github.io/portfolio/" target="_blank" rel="noopener noreferrer" style={{ color: '#6b21a8', textDecoration: 'none', fontWeight: '700' }}>
+                      Portfolio
+                    </a>
+                    <a href="https://github.com/DubeyJi0840" target="_blank" rel="noopener noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>
+                      github.com/DubeyJi0840
+                    </a>
+                    <a href="https://linkedin.com/in/aditya-narayan-84634525b" target="_blank" rel="noopener noreferrer" style={{ color: '#64748b', textDecoration: 'none' }}>
+                      linkedin.com/in/aditya-narayan-84634525b
+                    </a>
                   </div>
                 </div>
 
@@ -360,7 +373,7 @@ export const ResumeSection: React.FC = () => {
 
               {/* 2-Column Split: Left Column (58%) & Right Column (42%) */}
               <div style={{ display: 'grid', gridTemplateColumns: '58% 42%', gap: '18px', alignItems: 'start' }}>
-                
+
                 {/* LEFT COLUMN: Experience, Education, Technical Skills */}
                 <div>
                   {/* WORK EXPERIENCE */}

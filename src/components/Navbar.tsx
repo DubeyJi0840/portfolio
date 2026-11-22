@@ -36,7 +36,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           : 'bg-transparent py-5'
       }`}
     >
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 flex items-center justify-between w-full">
         {/* Brand */}
         <a href="#" className="flex items-center gap-3 group">
           <div className="w-8 h-8 rounded-md bg-[#16171c] border border-[#27272a] flex items-center justify-center font-mono font-bold text-xs text-[#f4f4f5] group-hover:border-[#ff5500] transition-colors">
@@ -114,7 +114,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="md:hidden p-2 rounded-md border border-[#27272a] text-[#a1a1aa] hover:text-white hover:border-[#3f3f46]"
+          className="md:hidden p-2 rounded-md border border-[#27272a] text-[#a1a1aa] hover:text-white hover:border-[#3f3f46] shrink-0"
           aria-label="Toggle Navigation"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}

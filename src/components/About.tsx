@@ -60,8 +60,8 @@ export const About: React.FC<AboutProps> = ({ onOpenResume }) => {
             <div className="relative rounded-2xl bg-[#121318] border border-[#232530] p-3 shadow-xl group">
               <div className="relative aspect-[4/5] rounded-xl overflow-hidden bg-[#181920]">
                 <img
-                  src={personalInfo.photos.professional}
-                  alt="Aditya Narayan - Software Developer"
+                  src={personalInfo.photos.workspace}
+                  alt="Aditya Narayan - Software Developer at Work"
                   className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0e0f14]/80 via-transparent to-transparent"></div>
@@ -141,31 +141,31 @@ export const About: React.FC<AboutProps> = ({ onOpenResume }) => {
                 Core Engineering Commitments:
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs font-mono text-[#d4d4d8]">
-                <div className="flex items-center gap-2 bg-[#121318] p-3 rounded-lg border border-[#1e2027]">
+                <div className="min-w-0 flex items-center gap-2 bg-[#121318] p-3 rounded-lg border border-[#1e2027]">
                   <CheckCircle2 className="w-4 h-4 text-[#ff5500] shrink-0" />
-                  <span>Type-Safe & Scalable Architectures</span>
+                  <span className="break-words">Type-Safe & Scalable Architectures</span>
                 </div>
-                <div className="flex items-center gap-2 bg-[#121318] p-3 rounded-lg border border-[#1e2027]">
+                <div className="min-w-0 flex items-center gap-2 bg-[#121318] p-3 rounded-lg border border-[#1e2027]">
                   <CheckCircle2 className="w-4 h-4 text-[#ff5500] shrink-0" />
-                  <span>Sub-60fps Fluid Mobile Transitions</span>
+                  <span className="break-words">Sub-60fps Fluid Mobile Transitions</span>
                 </div>
-                <div className="flex items-center gap-2 bg-[#121318] p-3 rounded-lg border border-[#1e2027]">
+                <div className="min-w-0 flex items-center gap-2 bg-[#121318] p-3 rounded-lg border border-[#1e2027]">
                   <CheckCircle2 className="w-4 h-4 text-[#ff5500] shrink-0" />
-                  <span>Documented & Tested REST APIs</span>
+                  <span className="break-words">Documented & Tested REST APIs</span>
                 </div>
-                <div className="flex items-center gap-2 bg-[#121318] p-3 rounded-lg border border-[#1e2027]">
+                <div className="min-w-0 flex items-center gap-2 bg-[#121318] p-3 rounded-lg border border-[#1e2027]">
                   <CheckCircle2 className="w-4 h-4 text-[#ff5500] shrink-0" />
-                  <span>AI-Accelerated Engineering Hygiene</span>
+                  <span className="break-words">AI-Accelerated Engineering Hygiene</span>
                 </div>
               </div>
             </div>
 
             {/* Action Buttons: View Resume, Download Resume, Contact */}
-            <div className="pt-4 flex flex-wrap items-center gap-3">
+            <div className="pt-4 flex flex-wrap items-center gap-2.5 sm:gap-3">
               {onOpenResume ? (
                 <button
                   onClick={onOpenResume}
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#ff5500] hover:bg-[#e04c00] text-xs font-semibold text-white transition-all shadow-sm shadow-[#ff5500]/20"
+                  className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-lg bg-[#ff5500] hover:bg-[#e04c00] text-xs font-semibold text-white transition-all shadow-sm shadow-[#ff5500]/20 shrink-0 cursor-pointer"
                 >
                   <FileText className="w-4 h-4" />
                   <span>View Resume</span>
@@ -173,7 +173,7 @@ export const About: React.FC<AboutProps> = ({ onOpenResume }) => {
               ) : (
                 <a
                   href="#resume"
-                  className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#ff5500] hover:bg-[#e04c00] text-xs font-semibold text-white transition-all shadow-sm shadow-[#ff5500]/20"
+                  className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-lg bg-[#ff5500] hover:bg-[#e04c00] text-xs font-semibold text-white transition-all shadow-sm shadow-[#ff5500]/20 shrink-0"
                 >
                   <FileText className="w-4 h-4" />
                   <span>View Resume</span>
@@ -183,7 +183,7 @@ export const About: React.FC<AboutProps> = ({ onOpenResume }) => {
               <a
                 href="./assets/aditya-narayan-ats-resume.pdf"
                 download="Aditya_Narayan_ATS_Resume.pdf"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#14151b] hover:bg-[#1d1f27] border border-[#272935] hover:border-[#ff5500] text-xs font-medium text-white transition-all"
+                className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-lg bg-[#14151b] hover:bg-[#1d1f27] border border-[#272935] hover:border-[#ff5500] text-xs font-medium text-white transition-all shrink-0"
               >
                 <Download className="w-4 h-4 text-[#ff5500]" />
                 <span>Download ATS PDF</span>
@@ -191,7 +191,7 @@ export const About: React.FC<AboutProps> = ({ onOpenResume }) => {
 
               <a
                 href="#contact"
-                className="inline-flex items-center gap-2 px-4 py-2.5 rounded-lg bg-[#14151b] hover:bg-[#1d1f27] border border-[#272935] text-xs font-mono text-[#a1a1aa] hover:text-white transition-all"
+                className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-lg bg-[#14151b] hover:bg-[#1d1f27] border border-[#272935] text-xs font-mono text-[#a1a1aa] hover:text-white transition-all shrink-0"
               >
                 <Mail className="w-4 h-4" />
                 <span>Get in Touch</span>
@@ -205,15 +205,15 @@ export const About: React.FC<AboutProps> = ({ onOpenResume }) => {
           {coreStrengths.map((s, idx) => (
             <div
               key={idx}
-              className="p-5 rounded-xl bg-[#111216] border border-[#20222a] hover:border-[#ff5500]/40 transition-all space-y-2.5 group"
+              className="min-w-0 p-5 rounded-xl bg-[#111216] border border-[#20222a] hover:border-[#ff5500]/40 transition-all space-y-2.5 group"
             >
-              <div className="w-10 h-10 rounded-lg bg-[#181a20] border border-[#252832] flex items-center justify-center group-hover:border-[#ff5500]/50 transition-colors">
+              <div className="w-10 h-10 rounded-lg bg-[#181a20] border border-[#252832] flex items-center justify-center group-hover:border-[#ff5500]/50 transition-colors shrink-0">
                 {s.icon}
               </div>
-              <h3 className="font-semibold text-sm text-white group-hover:text-[#ff5500] transition-colors">
+              <h3 className="font-semibold text-sm text-white group-hover:text-[#ff5500] transition-colors break-words">
                 {s.title}
               </h3>
-              <p className="text-xs text-[#a1a1aa] leading-relaxed">
+              <p className="text-xs text-[#a1a1aa] leading-relaxed break-words">
                 {s.description}
               </p>
             </div>

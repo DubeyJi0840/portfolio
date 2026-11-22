@@ -33,11 +33,11 @@ export const Experience: React.FC = () => {
                   {/* Timeline Dot */}
                   <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-3.5 h-3.5 rounded-full bg-[#16171d] border-2 border-[#ff5500] group-hover:scale-125 transition-transform"></div>
 
-                  <div className="p-6 rounded-xl bg-[#111216] border border-[#20222a] hover:border-[#ff5500]/40 transition-all space-y-4">
+                  <div className="min-w-0 p-5 sm:p-6 rounded-xl bg-[#111216] border border-[#20222a] hover:border-[#ff5500]/40 transition-all space-y-4">
                     {/* Header */}
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1 sm:gap-4">
-                      <div>
-                        <h4 className="text-lg font-bold text-white group-hover:text-[#ff5500] transition-colors">
+                      <div className="min-w-0">
+                        <h4 className="text-lg font-bold text-white group-hover:text-[#ff5500] transition-colors break-words">
                           {exp.role}
                         </h4>
                         <div className="text-sm font-medium text-[#e4e4e7]">

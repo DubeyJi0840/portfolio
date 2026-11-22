@@ -72,7 +72,7 @@ export const Projects: React.FC = () => {
           {filteredProjects.map((project) => (
             <div
               key={project.id}
-              className="rounded-xl bg-[#111216] border border-[#20222a] hover:border-[#ff5500]/50 transition-all p-6 flex flex-col justify-between group space-y-5"
+              className="min-w-0 rounded-xl bg-[#111216] border border-[#20222a] hover:border-[#ff5500]/50 transition-all p-5 sm:p-6 flex flex-col justify-between group space-y-5"
             >
               <div className="space-y-4">
                 {/* Card Top: Category & GitHub Link */}
@@ -154,7 +154,7 @@ export const Projects: React.FC = () => {
         </div>
 
         {/* GitHub Callout Footer */}
-        <div className="mt-12 p-6 rounded-xl bg-[#111216] border border-[#20222a] flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="mt-12 p-5 sm:p-6 rounded-xl bg-[#111216] border border-[#20222a] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-lg bg-[#16171c] border border-[#27272a] flex items-center justify-center shrink-0">
               <GithubIcon className="w-5 h-5 text-white" />

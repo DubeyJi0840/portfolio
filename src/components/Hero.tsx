@@ -55,7 +55,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
   };
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 bg-grid-subtle border-b border-[#1c1d22]">
+    <section className="relative overflow-hidden pt-32 pb-20 md:pt-40 md:pb-28 bg-grid-subtle border-b border-[#1c1d22]">
       {/* Subtle radial ambient gradient - very muted, NOT cheesy neon */}
       <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] bg-[#ff5500]/5 blur-[120px] pointer-events-none rounded-full" />
 
@@ -73,10 +73,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
             {/* Main Headline */}
             <div className="space-y-3">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08]">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight text-white leading-[1.08] break-words">
                 Aditya Narayan
               </h1>
-              <p className="text-xl sm:text-2xl font-medium text-[#d4d4d8]">
+              <p className="text-xl sm:text-2xl font-medium text-[#d4d4d8] break-words">
                 Software Developer{' '}
                 <span className="text-[#71717a] font-normal">|</span>{' '}
                 <span className="text-[#ff5500]">Flutter & Full-Stack</span>
@@ -84,18 +84,18 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             </div>
 
             {/* Concise Value Proposition */}
-            <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed max-w-2xl font-normal">
+            <p className="text-base sm:text-lg text-[#a1a1aa] leading-relaxed max-w-2xl font-normal break-words">
               Specialized in engineering production-grade cross-platform mobile apps with Flutter, responsive web interfaces with React, and robust backend APIs with .NET Core. Proven delivery across 50+ client contracts and enterprise environments.
             </p>
 
             {/* Quick stats ribbon - Animated in increasing order */}
-            <div className="grid grid-cols-3 gap-3 pt-2">
+            <div className="grid grid-cols-3 gap-2 sm:gap-3 pt-2">
               {personalInfo.metrics.map((item, idx) => (
                 <div
                   key={idx}
-                  className="px-3.5 py-3 rounded-lg bg-[#111216] border border-[#202228] hover:border-[#ff5500]/40 transition-colors"
+                  className="min-w-0 px-2 sm:px-3.5 py-2.5 sm:py-3 rounded-lg bg-[#111216] border border-[#202228] hover:border-[#ff5500]/40 transition-colors"
                 >
-                  <div className="text-xl sm:text-2xl font-bold text-white font-mono flex items-baseline">
+                  <div className="text-lg sm:text-2xl font-bold text-white font-mono flex items-baseline truncate">
                     <span className="text-[#ff5500] mr-0.5">#</span>
                     <CountUpMetric
                       target={item.numeric}
@@ -104,7 +104,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
                       duration={1400 + idx * 300}
                     />
                   </div>
-                  <div className="text-[11px] text-[#71717a] font-medium leading-tight mt-0.5">
+                  <div className="text-[10px] sm:text-[11px] text-[#71717a] font-medium leading-tight mt-0.5 break-words">
                     {item.label}
                   </div>
                 </div>
@@ -112,10 +112,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
             </div>
 
             {/* Action Buttons */}
-            <div className="pt-2 flex flex-wrap items-center gap-3">
+            <div className="pt-2 flex flex-wrap items-center gap-2.5 sm:gap-3">
               <a
                 href="#projects"
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-[#ff5500] hover:bg-[#e04c00] text-sm font-semibold text-white transition-all shadow-sm"
+                className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-md bg-[#ff5500] hover:bg-[#e04c00] text-xs sm:text-sm font-semibold text-white transition-all shadow-sm shrink-0"
               >
                 <span>Explore Projects</span>
                 <ArrowDown className="w-4 h-4" />
@@ -123,7 +123,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
               <button
                 onClick={onOpenResume}
-                className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-md bg-[#16171d] hover:bg-[#20222a] border border-[#2c2f38] hover:border-[#ff5500] text-sm font-medium text-white transition-all"
+                className="inline-flex items-center justify-center gap-2 px-4 sm:px-5 py-2.5 rounded-md bg-[#16171d] hover:bg-[#20222a] border border-[#2c2f38] hover:border-[#ff5500] text-xs sm:text-sm font-medium text-white transition-all shrink-0 cursor-pointer"
               >
                 <FileText className="w-4 h-4 text-[#ff5500]" />
                 <span>View Resume</span>
@@ -131,39 +131,39 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
               <a
                 href="#contact"
-                className="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-md bg-transparent hover:bg-[#14151a] border border-transparent hover:border-[#27272a] text-sm font-medium text-[#a1a1aa] hover:text-white transition-all"
+                className="inline-flex items-center justify-center gap-2 px-3.5 sm:px-4 py-2.5 rounded-md bg-transparent hover:bg-[#14151a] border border-transparent hover:border-[#27272a] text-xs sm:text-sm font-medium text-[#a1a1aa] hover:text-white transition-all shrink-0"
               >
                 <span>Get in Touch</span>
               </a>
             </div>
 
             {/* Contact quick actions bar */}
-            <div className="pt-3 border-t border-[#1c1d23] flex flex-wrap items-center gap-2.5 text-xs font-mono text-[#71717a]">
+            <div className="pt-3 border-t border-[#1c1d23] flex flex-wrap items-center gap-2 sm:gap-2.5 text-xs font-mono text-[#71717a]">
               {/* Phone with copy */}
-              <div className="flex items-center gap-1.5 bg-[#121317] px-2.5 py-1 rounded border border-[#22242a]">
-                <Phone className="w-3.5 h-3.5 text-[#ff5500]" />
-                <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="hover:text-white transition-colors">
+              <div className="flex items-center gap-1.5 bg-[#121317] px-2.5 py-1 rounded border border-[#22242a] max-w-full">
+                <Phone className="w-3.5 h-3.5 text-[#ff5500] shrink-0" />
+                <a href={`tel:${personalInfo.phone.replace(/\s+/g, '')}`} className="hover:text-white transition-colors truncate">
                   {personalInfo.phone}
                 </a>
                 <button
                   onClick={() => copyToClipboard(personalInfo.phone, 'phone')}
                   aria-label="Copy phone"
-                  className="ml-1 text-[#71717a] hover:text-white transition-colors"
+                  className="ml-1 text-[#71717a] hover:text-white transition-colors p-0.5 shrink-0"
                 >
                   {copiedType === 'phone' ? <Check className="w-3.5 h-3.5 text-[#ff5500]" /> : <Copy className="w-3 h-3" />}
                 </button>
               </div>
 
               {/* Email with copy */}
-              <div className="flex items-center gap-1.5 bg-[#121317] px-2.5 py-1 rounded border border-[#22242a]">
-                <Mail className="w-3.5 h-3.5 text-[#ff5500]" />
-                <a href={`mailto:${personalInfo.email}`} className="hover:text-white transition-colors">
+              <div className="flex items-center gap-1.5 bg-[#121317] px-2.5 py-1 rounded border border-[#22242a] max-w-full">
+                <Mail className="w-3.5 h-3.5 text-[#ff5500] shrink-0" />
+                <a href={`mailto:${personalInfo.email}`} className="hover:text-white transition-colors truncate max-w-[160px] sm:max-w-none">
                   {personalInfo.email}
                 </a>
                 <button
                   onClick={() => copyToClipboard(personalInfo.email, 'email')}
                   aria-label="Copy email"
-                  className="ml-1 text-[#71717a] hover:text-white transition-colors"
+                  className="ml-1 text-[#71717a] hover:text-white transition-colors p-0.5 shrink-0"
                 >
                   {copiedType === 'email' ? <Check className="w-3.5 h-3.5 text-[#ff5500]" /> : <Copy className="w-3 h-3" />}
                 </button>
@@ -197,7 +197,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
 
           {/* Right Column: Authentic Professional Portrait */}
           <div className="lg:col-span-5 flex flex-col items-center lg:items-end">
-            <div className="relative w-full max-w-[340px] sm:max-w-[380px]">
+            <div className="relative w-full max-w-[300px] sm:max-w-[380px]">
               {/* Photo Frame Container */}
               <div className="relative rounded-2xl bg-[#121318] border border-[#232530] p-2.5 shadow-2xl group transition-all duration-300">
                 {/* Actual Image - Single Approved Picture */}
